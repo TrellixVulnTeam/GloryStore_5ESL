@@ -6,10 +6,14 @@ module.exports = (db) => {
   }
   // Create a table
   return db.queryAsync(`
-    CREATE TABLE IF NOT EXISTS tableName (
-      id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-      column1 VARCHAR(255),
-      column2 INT NOT NULL DEFAULT 0
+    CREATE TABLE IF NOT EXISTS Glory (
+      id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,     
+      nickname VARCHAR(255), 
+      games VARCHAR(255),
+      rankee VARCHAR(255),
+      image VARCHAR(255),
+      gamestrophies VARCHAR(255),
+      priceofhisglory INT 
     );`)
     .error(err => {
       console.log(err);
